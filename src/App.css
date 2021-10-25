@@ -68,18 +68,25 @@
   order: 3;
   flex: 1;
   margin-top: 1.4rem;
-  margin-left: 2.9rem;
+  margin-left: 2rem;
 }
 
-.App-create-input {
+.App-create-form {
   order: 2;
   flex: 4;
   margin: 0;
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  max-width: 60%;
+}
+
+.App-create-input {
+  background-color: rgba(0, 0, 0, 0);
   color: #000;
   font-size: 20px;
-  max-width: 60%;
+  max-width: 100%;
+  height: 100%;
 }
 
 .App-create-input::placeholder {
@@ -96,6 +103,7 @@
 }
 
 .App-todo-list-base {
+  box-sizing: content-box;
   height: 4rem;
   width: 100%;
   display: flex;
@@ -114,8 +122,7 @@
 .App-todo-list-stat {
   flex: 1;
   order: 1;
-  margin-top: 1.4rem;
-  margin-left: .8rem;
+  padding: 0;
   opacity: .5;
 }
 
@@ -132,7 +139,7 @@
 .App-todo-list-del {
   flex: 1;
   order: 3;
-  margin-top: 1.4rem;
+ 
 }
 
 .App-link {
@@ -150,4 +157,24 @@ h1, h2 {
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes addList {
+  0% {transform: translateY(-20%); 
+    opacity: 0;}
+  100% {transform: none; opacity: 1;}
+}
+
+.add-list {
+  animation: addList 1s;
+}
+
+@keyframes removeList {
+  0% {transform: translateY(+20%); 
+    opacity: 1;}
+  100% {transform: none; opacity: 0;}
+}
+
+.remove-list {
+  animation: removeList 2s;
 }
