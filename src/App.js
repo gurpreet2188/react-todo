@@ -16,9 +16,11 @@ function App() {
         <div>
          
           { isTabletOrMobile && 
+          
             <div className="App p-6">
             <Base />
             </div>
+            
           }
           
           {isBigScreen && 
