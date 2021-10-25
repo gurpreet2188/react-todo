@@ -1,14 +1,14 @@
-import react from "react";
+import eact from "react";
 import { useState, useRef } from "react";
 
 export default function Todo ({ todo, index, completed, del}) {
     const divRef = useRef()
     function click () {
         divRef.current.className = "App-todo-list-base remove-list"
-        console.log(divRef.current.className)
+        console.log(divRef)
         setTimeout( del(index), 200)
-       
     }
+   
      
   return (
       <div>

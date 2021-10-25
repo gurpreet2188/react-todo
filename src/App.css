@@ -48,6 +48,7 @@
   border-radius: .7rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
   margin-top: 4rem;
   background-color: #B7B7A4;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -62,6 +63,7 @@
   order: 1;
   margin-top: 1.4rem;
   margin-left: .8rem;
+  
 }
 
 .App-icon-add {
@@ -139,8 +141,40 @@
 .App-todo-list-del {
   flex: 1;
   order: 3;
- 
 }
+
+.App-todo-list-options {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  background-color: #B7B7A4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: .7rem;
+}
+.App-todo-list-options-all {
+  line-height: 4rem;
+  opacity: 0.5;
+}
+
+.App-todo-list-options-active {
+  line-height: 4rem;
+  opacity: 0.5;
+}
+
+.App-todo-list-options-completed {
+  line-height: 4rem;
+  opacity: 0.5;
+}
+
+.App-todo-list-option-current {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -166,15 +200,20 @@ h1, h2 {
 }
 
 .add-list {
-  animation: addList 1s;
+  animation: addList .3s;
 }
 
 @keyframes removeList {
-  0% {transform: translateY(+20%); 
+  0% {transform: translateY(+10%); 
     opacity: 1;}
-  100% {transform: none; opacity: 0;}
+  100% {transform: translateY(+20%); opacity: 0;}
 }
 
 .remove-list {
-  animation: removeList 2s;
+  animation: removeList .3s;
+  visibility: hidden;
+  height: 0;
+  z-index: -4;
+  margin: 0;
+  /* height: 0; */
 }
