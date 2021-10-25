@@ -9,9 +9,13 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-append-to-body": "^2.0.26",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-css-theme-switcher": "^0.3.0",
     "react-dom": "^17.0.2",
     "react-fast-marquee": "^1.2.1",
+    "react-responsive": "^9.0.0-beta.4",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

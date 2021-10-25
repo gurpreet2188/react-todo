@@ -1,0 +1,35 @@
+.title-dark {
+    color: #FFE8D6;
+}
+
+.card-bg-dark {
+    background-color: #6B705C;
+  }
+  
+.card-bg-done-dark {
+background-color: #A5A58D;
+}
+
+
+.card-text-dark {
+    color: #FFE8D6;
+    opacity: .8;
+}
+
+.placeholder-dark {
+    color: #FFE8D6;
+}
+
+.card-stats {
+    color: #FFE8D6;
+}
+
+.svg-dark {
+    fill: #fff
+}
+
+.svg-icon-dark{
+    stroke:rgba(0,0,0,0);
+    fill: #fff;
+    opacity: .8;
+  }

@@ -13,172 +13,12 @@
   }
 }
 
-.App-header {
-  /* background-color: #282c34; */
-  min-height: 3vh;
-  display: flex;
-  flex-direction: row;
- 
+body {
+  background: rgb(107,112,92);
+  background: linear-gradient(164deg, rgba(107,112,92,1) 1%, rgba(183,183,164,1) 100%);
+  background-attachment: fixed;
 }
 
-.App-toggle {
-  flex: 1;
-  order: 2;
-  height: 4rem;
-  width: 4rem;
-  opacity: .8;
-  margin-left: 10rem;
-  margin-top: .5rem;
-}
-
-.App-title {
-  flex: 5;
-  order: 1;
-  text-align: left;
-  font-size: 36px;
-  color: #6B705C;
-  opacity: .8;
-}
-
-.App-create {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 4rem;
-  border-radius: .7rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  margin-top: 4rem;
-  background-color: #B7B7A4;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.App-icons-base {
-  opacity: .5;
-}
-
-.App-icon-create {
-  flex: 1;
-  order: 1;
-  margin-top: 1.4rem;
-  margin-left: .8rem;
-  
-}
-
-.App-icon-add {
-  order: 3;
-  flex: 1;
-  margin-top: 1.4rem;
-  margin-left: 2rem;
-}
-
-.App-create-form {
-  order: 2;
-  flex: 4;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0);
-  height: 100%;
-  max-width: 60%;
-}
-
-.App-create-input {
-  background-color: rgba(0, 0, 0, 0);
-  color: #000;
-  font-size: 20px;
-  max-width: 100%;
-  height: 100%;
-}
-
-.App-create-input::placeholder {
-  color: #000;
-  opacity: .5;
-}
-
-.App-todo-div {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 100%;
-  margin-top: 1.5rem;
-}
-
-.App-todo-list-base {
-  box-sizing: content-box;
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  border-radius: .7rem;
-  background-color: #B7B7A4;
-  margin-top: .8rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  /* text-align: justify;
-  line-height: 4rem;
-  font-size: 20px;
-  text-anchor: start; */
-  transition: all 300ms ease-in-out;
-}
-
-.App-todo-list-stat {
-  flex: 1;
-  order: 1;
-  padding: 0;
-  opacity: .5;
-}
-
-.App-todo-list-text {
-  flex: 5;
-  order: 2;
-  width: 60%;
-  line-height: 4rem;
-  font-size: 20px;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.App-todo-list-del {
-  flex: 1;
-  order: 3;
-}
-
-.App-todo-list-options {
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  background-color: #B7B7A4;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: .7rem;
-}
-.App-todo-list-options-all {
-  line-height: 4rem;
-  opacity: 0.5;
-}
-
-.App-todo-list-options-active {
-  line-height: 4rem;
-  opacity: 0.5;
-}
-
-.App-todo-list-options-completed {
-  line-height: 4rem;
-  opacity: 0.5;
-}
-
-.App-todo-list-option-current {
-  opacity: 1;
-  transition: opacity 150ms ease-in-out;
-}
-
-
-.App-link {
-  color: #61dafb;
-}
 
 h1, h2 {
   font-family: 'Bellefair', serif;
@@ -216,4 +56,18 @@ h1, h2 {
   z-index: -4;
   margin: 0;
   /* height: 0; */
+}
+
+
+.tab {
+  /* position: absolute; */
+  width: 80%;
+  height: 100vh;
+  border: 3px solid rgba(0, 0, 0, .1);
+  margin-left: auto;
+  margin-right: auto;
+  top: 2rem;
+  border-radius: 4rem;
+  margin-top: 10rem;;
+
 }
