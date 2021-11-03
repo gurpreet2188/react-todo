@@ -105,6 +105,20 @@ export default function  Base() {
         } 
     }
 
+    function swipeDelete () {
+      // onTouchMove={touchMoveEvent => this.handleTouchMove(touchMoveEvent)}
+      // onTouchEnd={() => this.handleTouchEnd()}
+      for(var i = 0; i < todos.length; i++) {
+
+      }
+      // onTouchStart={touchStartEvent => this.handleTouchStart(touchStartEvent)}
+      // get the touch input
+      // go thru cards
+      // get the index of swiped
+      // delete func
+
+    }
+
     function showCmpleted () {
         btnAll.current.className = "card-stats-deactive"
         btnActive.current.className = "card-stats-deactive"
