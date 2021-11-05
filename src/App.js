@@ -30,10 +30,8 @@ function App() {
 
               <div className="App p-6">
                 <GlobalStyle/>
-                <Header sw = {themeSwitch} />
-                    <Base />
-           
-                
+                  <Header sw = {themeSwitch} />
+                      <Base />
               </div>
             </ThemeProvider>
            
