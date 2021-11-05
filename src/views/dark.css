@@ -1,35 +1,41 @@
-.title-dark {
+/* .title-dark {
     color: #FFE8D6;
-}
+} */
 
-.card-bg-dark {
+/* .card-bg-dark {
     background-color: #6B705C;
-  }
+  } */
   
 .card-bg-done-dark {
 background-color: #A5A58D;
 }
 
 
-.card-text-dark {
+/* .card-text-dark {
     color: #FFE8D6;
     opacity: .8;
-}
+} */
 
-.placeholder-dark {
+/* .placeholder-dark {
     color: #FFE8D6;
-}
+} */
 
-.card-stats {
+/* .card-stats {
     color: #FFE8D6;
-}
+} */
 
-.svg-dark {
+/* .svg-dark {
     fill: #fff
-}
+} */
 
-.svg-icon-dark{
+/* .svg-icon-dark{
     stroke:rgba(0,0,0,0);
     fill: #fff;
     opacity: .8;
-  }
+  } */
+
+  /* body {
+    background: rgb(107,112,92);
+    background: linear-gradient(164deg, rgba(107,112,92,1) 1%, rgba(183,183,164,1) 100%);
+    background-attachment: fixed;
+  } */

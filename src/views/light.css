@@ -1,27 +1,33 @@
-.title-light {
+/* .title-light {
   color: #6B705C;
-}
+} */
 
-.card-bg-light {
+/* .card-bg-light {
   background-color: #B7B7A4;
-}
+} */
 
-.card-bg-done {
+/* .card-bg-done {
   background-color: #B7B7A4;
-}
+} */
 
-.card-text-light {
+/* .card-text-light {
   color: #464A3A;
-}
+} */
 
-.placeholder-light {
+/* .placeholder-light {
   color: #6B705C;
-}
+} */
 
-.svg-header-light {
+/* .svg-header-light {
   fill: #6B705C
-}
+} */
 
-.svg-icon-light {
+/* .svg-icon-light {
   opacity: .6;
-}
+} */
+
+/* body {
+  background: rgb(107,112,92);
+  background: linear-gradient(164deg, rgba(107,112,92,1) 1%, rgba(183,183,164,1) 100%);
+  background-attachment: fixed;
+} */

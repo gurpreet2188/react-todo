@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import './views/font.css';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './components/gStyle';
+import {darkTheme, lightTheme} from './components/themes'
 import './views/light.css'
 import './views/dark.css'
 import './views/common.css'
@@ -7,20 +10,33 @@ import './App.css';
 
 import Base from './components/Base'
 import { useMediaQuery } from 'react-responsive';
+import { Header } from './components/Header';
 
 
 function App() {
   const isBigScreen = useMediaQuery({ query: '(min-width: 1001px)' })
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+
+  const [theme, setTheme] = useState('light')
+
+  function themeSwitch () {
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
   return (
         <div>
          
           { isTabletOrMobile && 
-          
-            <div className="App p-6">
-            <Base />
-            </div>
-            
+            <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}> 
+
+              <div className="App p-6">
+                <GlobalStyle/>
+                <Header sw = {themeSwitch} />
+                    <Base />
+           
+                
+              </div>
+            </ThemeProvider>
+           
           }
           
           {isBigScreen && 

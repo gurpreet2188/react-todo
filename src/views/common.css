@@ -4,23 +4,24 @@
   flex-direction: row;
 }
 
-.todo-tile {
-    flex: 10;
+.todo-title {
+    flex: 5;
     order: 1;
     text-align: left;
     font-size: 2.8rem;
     opacity: .8;
-    text-align: center;
+    text-align: left;
 }
 
-.theme-togle {
+.theme-toggle {
     flex: 1;
     order: 2;
-    height: 4rem;
-    width: 4rem;
+    height: 2.2rem;
+    width: 2.2rem;
     opacity: .8;
-    /* justify-content: center; */
-    margin-top: .5rem;
+    align-self: center;
+    left: auto;
+    right: 0;
 }
 
 .card-create {
@@ -100,7 +101,6 @@
     border-radius: .7rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: all 300ms ease-in-out;
-    overflow: auto;
     
 }
 
@@ -161,6 +161,16 @@
   width: 35vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+@keyframes swipeleft {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(-200%);}
+}
+
+.swipe-delete{
+    animation: swipeleft .5s;
+    transform: translateX(-200%);
 }
 
 
