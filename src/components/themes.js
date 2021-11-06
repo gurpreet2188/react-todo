@@ -8,6 +8,7 @@ export const darkTheme = {
     cardText: "#FFE8D6",
     cardBG: "#6B705C",
     icon: "#fff",
+    doneStroke: "#FFE8D6",
     cardStats: "#FFE8D6"
 }
 
@@ -21,6 +22,7 @@ export const lightTheme = {
     cardText: "#464A3A",
     cardBG: "#B7B7A4",
     icon: "#000",
+    doneStroke: "#464A3A",
     cardStats: "#464A3A"
 }
 

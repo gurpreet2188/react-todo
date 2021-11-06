@@ -124,7 +124,7 @@
     padding: 0;
     opacity: 1;
     fill:none;
-    stroke:#000;
+    /* stroke:#000; */
     stroke-width:2px;
    
 }
@@ -134,13 +134,10 @@
     order: 1;
     opacity: 1;
     fill:none;
-    stroke:#000;
+    /* stroke:#000; */
     stroke-width:2px;
     stroke-linejoin:round;
-    /* stroke-miterlimit:10; */
-    /* fill-rule: evenodd; */
     stroke-linejoin:round;
-    /* transform: scale(-150%, 150%) translateY(-50%) translateX(-35%); */
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
     
@@ -169,7 +166,7 @@
  
 }
 
-.card-stats-deactive {
+.card-stats-inactive {
     opacity: .5;
 }
 

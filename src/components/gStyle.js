@@ -43,6 +43,14 @@ export const GlobalStyle = createGlobalStyle`
                 opacity: .8;
             }
 
+            .card-done-icon {
+                stroke:${({theme}) => theme.doneStroke};
+            }
+
+            .card-done-tick {
+                stroke:${({theme}) => theme.doneStroke};
+            }
+
             .card-stats {
                 color: ${({theme}) => theme.cardStats};
             }

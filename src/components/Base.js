@@ -31,6 +31,15 @@ export default function Base() {
     },
   ])
 
+  const [stat, setStat] = useState([
+      {all: true},
+      {active: false},
+      {done: false}
+  ])
+
+  
+
+
   const add = (text, done, ref) => {
     done = false
     ref = React.createRef(todos.length + 1)
@@ -65,6 +74,11 @@ export default function Base() {
         todos[i].ref.current.className = (todos[i].ref.current.className).replace(/ remove-list/g, "")
       }
     }
+    const newStat = [...stat]
+    newStat[0].all = true
+    newStat[0].active = false
+    newStat[0].done = false
+    setStat(newStat)
   }
 
   const showActive = () => {
@@ -79,6 +93,12 @@ export default function Base() {
         }
       }
     }
+
+    const newStat = [...stat]
+    newStat[0].all = false
+    newStat[0].active = true
+    newStat[0].done = false
+    setStat(newStat)
   }
 
   const showCmpleted = () => {
@@ -92,6 +112,12 @@ export default function Base() {
         }
       }
     }
+
+    const newStat = [...stat]
+    newStat[0].all = false
+    newStat[0].active = false
+    newStat[0].done = true
+    setStat(newStat)
   }
 
   const touchStart = (e) => {
@@ -135,9 +161,9 @@ export default function Base() {
       ))}
 
       <div className="card-stats card-bg">
-        <a ref={btnAll} className="card-stats-active" onClick={() => { showAll() }}> All </a>
-        <a ref={btnActive} className="card-stats-deactive" onClick={() => { showActive() }}> Active </a>
-        <a ref={btnCompleted} className="card-stats-deactive" onClick={() => { showCmpleted() }}> Completed </a>
+        <a ref={btnAll} className={stat[0].all ? "card-stats-active" : "card-stats-inactive"} onClick={() => { showAll() }}> All </a>
+        <a ref={btnActive} className={stat[0].active ? "card-stats-active" : "card-stats-inactive"} onClick={() => { showActive() }}> Active </a>
+        <a ref={btnCompleted} className={stat[0].done ? "card-stats-active" : "card-stats-inactive"} onClick={() => { showCmpleted() }}> Completed </a>
       </div>
 
     </div>

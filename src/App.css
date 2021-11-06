@@ -37,16 +37,21 @@ h1, h2 {
 }
 
 @keyframes removeList {
-  0% {transform: translateY(+10%); 
+  0% {
+    transform: translateY(+10%); 
     opacity: 1;}
-  100% {transform: translateY(+20%); opacity: 0;}
+  100% {
+    transform: translateY(+20%); 
+    opacity: 0;}
 }
 
 .remove-list {
-  animation: removeList .5s;
+  animation: removeList .4s;
+  opacity: 0;
   visibility: hidden;
+  /* display: none; */
   height: 0;
-  z-index: -4;
+  /* z-index: -4; */
   margin: 0;
 }
 
