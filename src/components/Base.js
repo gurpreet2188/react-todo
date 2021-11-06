@@ -4,14 +4,14 @@ import { InputForm } from "./Input";
 import { List } from "./List";
 
 export default function  Base() {
-    const title = useRef(null)
+    // const title = useRef(null)
     const btnAll = useRef(null)
     const btnActive = useRef(null)
     const btnCompleted = useRef(null)
-    let tStartX = 0
-    let tStartY = 0
-    let tEndX = 0
-    let tEndY = 0
+    // let tStartX = 0
+    // let tStartY = 0
+    // let tEndX = 0
+    // let tEndY = 0
     const [todos, setTodos] = useState([
         // fot testing
       {text: "List 1",
@@ -25,6 +25,7 @@ export default function  Base() {
       ref: React.createRef(2)},
     ])
 
+    
   
     const add = (text, done, ref) => {
       done = false
@@ -39,11 +40,9 @@ export default function  Base() {
       const newList = [...todos]
       console.log(newList[index].done)
       if (!newList[index].done){
-          newList[index].ref.current.className = "card-list card-bg add-list card-bg-done"
           newList[index].done = true
           setTodos(newList)
       } else {
-        newList[index].ref.current.className = "card-list card-bg add-list"
         newList[index].done = false
         setTodos(newList)
       }
@@ -55,34 +54,41 @@ export default function  Base() {
       setTodos(newList)
     }
 
-
-    function showAll () {
-        btnAll.current.className = "card-stats-active"
-        btnActive.current.className = "card-stats-deactive"
-        btnCompleted.current.className = "card-stats-deactive"
-        
-        for(var i = 0; i < todos.length; i++) {
-            if(todos[i].ref.current.className === "card-list card-bg add-list card-bg-done remove-list")
-           { todos[i].ref.current.className = "card-list card-bg add-list card-bg-done"}
-           if (todos[i].ref.current.className === "card-list card-bg add-list remove-list") {
-            todos[i].ref.current.className = "card-list card-bg add-list"
-            }
-        } 
-
+    const showAll = () => {
+        for (var i in todos) {
+          if((todos[i].ref.current.className).includes(" remove-list")) {
+            todos[i].ref.current.className = (todos[i].ref.current.className).replace(/ remove-list/g, "")
+          }
+        }
     }
     
-    function showActive () {
-        btnAll.current.className = "card-stats-deactive"
-        btnActive.current.className = "card-stats-active"
-        btnCompleted.current.className = "card-stats-deactive"
-        for(var i = 0; i < todos.length; i++) {
-            if(todos[i].ref.current.className === "card-list card-bg add-list card-bg-done")
-            {todos[i].ref.current.className = "card-list card-bg add-list card-bg-done remove-list"}
-            if(todos[i].ref.current.className === "card-list card-bg add-list remove-list") 
-            {todos[i].ref.current.className = "card-list card-bg add-list"}
-        } 
+    const showActive = () => {
+
+        for (var i in todos) {
+            if(todos[i].done === true) {
+              todos[i].ref.current.className += " remove-list"
+            }
+            if(todos[i].done === false ) {
+              if((todos[i].ref.current.className).includes(" remove-list")) {
+                todos[i].ref.current.className = (todos[i].ref.current.className).replace(/ remove-list/g, "")
+              }
+            }
+        }
     }
 
+    const showCmpleted  = () => {
+        for (var i in todos) {
+          if(todos[i].done === false) {
+            todos[i].ref.current.className += " remove-list"
+          } 
+          if(todos[i].done === true ) {
+            if((todos[i].ref.current.className).includes(" remove-list")) {
+              todos[i].ref.current.className = (todos[i].ref.current.className).replace(/ remove-list/g, "")
+            } 
+          }
+      }
+    }
+  
     // function swipeDelete(index) {
     //   let dX = tEndX - tStartX
     //   let dY = tEndY - tStartY
@@ -102,22 +108,6 @@ export default function  Base() {
     //   }
     // }
 
-    function showCmpleted () {
-        btnAll.current.className = "card-stats-deactive"
-        btnActive.current.className = "card-stats-deactive"
-        btnCompleted.current.className = "card-stats-active"
-        
-        for(var i = 0; i < todos.length; i++) {
-
-            if(todos[i].ref.current.className === "card-list card-bg add-list")
-            {todos[i].ref.current.className = "card-list card-bg add-list remove-list"}
-
-            if(todos[i].ref.current.className === "card-list card-bg add-list card-bg-done remove-list") {
-                todos[i].ref.current.className = "card-list card-bg add-list card-bg-done"
-            }
-        }
-    }
-  
     return (
         <div>
          

@@ -44,12 +44,11 @@ h1, h2 {
 }
 
 .remove-list {
-  animation: removeList .3s;
+  animation: removeList .5s;
   visibility: hidden;
   height: 0;
   z-index: -4;
   margin: 0;
-  /* height: 0; */
 }
 
 
