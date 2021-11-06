@@ -100,6 +100,8 @@ export default function Base() {
   }
 
   function swipeDelete(index, e) {
+    var p = document.querySelector(".card-done-tick")
+    console.log(p.getTotalLength())
     tEndX = e.changedTouches[0].screenX 
     tEndY= e.changedTouches[0].screenY
 
@@ -111,15 +113,9 @@ export default function Base() {
 
       if (dX < 0) {
         todos[index].ref.current.className += " swipe-delete"
-        
           setTimeout(() => {
             del(index)
           },510)
-        
-       
-
-       
-
       }
     }
   }
@@ -138,11 +134,10 @@ export default function Base() {
           swipeDelete={swipeDelete} />
       ))}
 
-
       <div className="card-stats card-bg">
-        <a href="#" ref={btnAll} className="card-stats-active" onClick={() => { showAll() }}> All </a>
-        <a href="#" ref={btnActive} className="card-stats-deactive" onClick={() => { showActive() }}> Active </a>
-        <a href="#" ref={btnCompleted} className="card-stats-deactive" onClick={() => { showCmpleted() }}> Completed </a>
+        <a ref={btnAll} className="card-stats-active" onClick={() => { showAll() }}> All </a>
+        <a ref={btnActive} className="card-stats-deactive" onClick={() => { showActive() }}> Active </a>
+        <a ref={btnCompleted} className="card-stats-deactive" onClick={() => { showCmpleted() }}> Completed </a>
       </div>
 
     </div>
