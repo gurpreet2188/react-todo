@@ -39,10 +39,15 @@ function App() {
           
           {isBigScreen && 
           <div className="desktop"> 
-          <style> {'background: rgb(107,112,92);background: radial-gradient(circle, rgba(107,112,92,1) 1%, rgba(80,82,70,1) 55%, rgba(183,183,164,1) 100%);'} </style>
-            <div className="App p-11">
-            <Base />
-            </div>
+            <style> {'background: rgb(107,112,92);background: radial-gradient(circle, rgba(107,112,92,1) 1%, rgba(80,82,70,1) 55%, rgba(183,183,164,1) 100%);'} </style>
+            <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}> 
+
+                <div className="App p-6">
+                  <GlobalStyle/>
+                    <Header sw = {themeSwitch} />
+                        <Base />
+                </div>
+            </ThemeProvider>
           </div>
           }
           
