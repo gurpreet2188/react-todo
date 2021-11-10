@@ -14,21 +14,21 @@ export default function Base() {
   let tEndY = 0
   const [todos, setTodos] = useState([
     // fot testing
-    {
-      text: "List 1",
-      done: false,
-      ref: React.createRef(0)
-    },
-    {
-      text: "List 2",
-      done: false,
-      ref: React.createRef(1)
-    },
-    {
-      text: "List 3",
-      done: false,
-      ref: React.createRef(2)
-    },
+    // {
+    //   text: "List 1",
+    //   done: false,
+    //   ref: React.createRef(0)
+    // },
+    // {
+    //   text: "List 2",
+    //   done: false,
+    //   ref: React.createRef(1)
+    // },
+    // {
+    //   text: "List 3",
+    //   done: false,
+    //   ref: React.createRef(2)
+    // },
   ])
 
   const [stat, setStat] = useState([

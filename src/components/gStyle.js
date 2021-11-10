@@ -19,6 +19,14 @@ export const GlobalStyle = createGlobalStyle`
                 opacity: .6;
             }
 
+            .create-form {
+                background-color: ${({theme}) => theme.cardBG};
+            }
+
+            .card-create-input {
+                color: ${({theme}) => theme.cardText};
+            }
+
             .card-create-input::placeholder {
                 color: ${({theme}) => theme.placeholderText};
             }
