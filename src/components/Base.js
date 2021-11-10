@@ -126,8 +126,6 @@ export default function Base() {
   }
 
   function swipeDelete(index, e) {
-    var p = document.querySelector(".card-done-tick")
-    console.log(p.getTotalLength())
     tEndX = e.changedTouches[0].screenX 
     tEndY= e.changedTouches[0].screenY
 

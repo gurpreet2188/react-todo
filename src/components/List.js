@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function List({ index, todo, completed, del, touchStart, swipeDelete }) {
+
+    const [tick, setTick] = useState(" ")
+
+    const ticks = () => {
+        todo.done ? setTick(" tick-on")  : setTick(" tick-off")
+    }
 
     return (
         <div key={index} id={index} className="card-list card-bg add-list" ref={todo.ref} onTouchStart={(e) => { touchStart(e) }} onTouchEnd={(e) => { swipeDelete(index, e) }}>
             <button className="card-done-icon" >
 
                 <svg style={{ display: "inline", zIndex: "-999" }}
-                    onClick={() => { completed(index) }} xmlns="http://www.w3.org/2000/svg" id="Outline" width="18" height="18" viewBox="0 0 24 24" version="1.1" id="svg5">
+                    onClick={() => { 
+                        completed(index) 
+                        ticks()
+                        }} xmlns="http://www.w3.org/2000/svg" id="Outline" width="18" height="18" viewBox="0 0 24 24" version="1.1" id="svg5">
                     <circle className="card-done-icon" transform="scale(1,-1)" cx="12" cy="-12" r="10.498" />
-                    <path className={todo.done ? "card-done-tick tick-on" : "card-done-tick tick-off"} d="m6.3737 12.25 4.4628 3.9134 7.0466-8.1999" pathLength="100" />
+                    <path className={"card-done-tick" + tick} d="m6.3737 12.25 4.4628 3.9134 7.0466-8.1999" pathLength="100" />
                 </svg>
 
             </button>
